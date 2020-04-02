@@ -14,7 +14,7 @@ def create_wordlist_xml(path):
                     temp_list.extend(sub_child.text.split())
                     for t in temp_list:
                         if len(t) > 6:
-                            word_list.append(t)
+                            word_list.append(t.capitalize())
     return word_list
 
 
@@ -27,7 +27,7 @@ def create_wordlist_json(path):
             temp_list.extend(item['description'].split())
             for t in temp_list:
                 if len(t) > 6:
-                    word_list.append(t)
+                    word_list.append(t.capitalize())
     return word_list
 
 
